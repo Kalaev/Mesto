@@ -1,4 +1,4 @@
-.like__button {
+.element__button-like {
   color: white;
   stroke: black;
   background: none;
@@ -11,6 +11,6 @@
   cursor: pointer;
 }
 
-.like__button:hover {
+.element__button-like:hover {
   opacity: 0.5;
 }
