@@ -1,7 +1,6 @@
 .like__button {
-  color: white;
-  stroke: black;
-  background: none;
+  background-image: url(../../images/Heart.svg);
+  background-color: white;
   width: 22px;
   height: 19px;
   border: none;
