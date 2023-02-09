@@ -1,0 +1,8 @@
+.element__image {
+  display: block;
+  object-fit: contain;
+  object-position: 50% 50%;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px; /* это открытие посвящается инспектору(не ДПС)*/
+}

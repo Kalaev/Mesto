@@ -1,0 +1,11 @@
+.like__button_active {
+  background: none;
+  color: black;
+  width: 22px;
+  height: 19px;
+  border: none;
+  margin-top: 5px;
+  margin-right: 15px;
+  padding: 0;
+  cursor: pointer;
+}
