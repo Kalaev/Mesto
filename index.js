@@ -21,9 +21,9 @@ let inputName = document.querySelector(".popup__name")//объявил, что �
 let inputAbout = document.querySelector(".popup__about")
 
 const popup = document.querySelector(".popup");
-const closeButton = popup.querySelector(".popup__close");
+const closeButton = popup.querySelector(".popup_close");
 
-const saveButton = popup.querySelector(".popup__save");
+const saveButton = popup.querySelector(".popup_save");
  saveButton.addEventListener('click', save);
  function save(){
     document.querySelector(".profile__name").textContent = inputName.value//тут я сделал так, чтоб функция сохранить брала данные (value) из класса профильНэйм//
