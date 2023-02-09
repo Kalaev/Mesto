@@ -1,14 +1,14 @@
-const likeButtons = document.querySelectorAll(".like__button"); //Объявил констанцию лайкающих кнопок, что она в html называется классом like__button//
+const likeButtons = document.querySelectorAll(".element__button"); //Объявил констанцию лайкающих кнопок, что она в html называется классом like__button//
 
 likeButtons.forEach(button =>{ //лайкающие кнопки их инструкция кнопка повешенная на клик теперь она называется лайк//
     button.addEventListener('click', like)
 })
 
 function like(){//работать лайк будет так://
-    if(this.classList.contains('like__button_active')){//если кликнув там будет лайк актив,... //
-        this.classList.remove("like__button_active");//...remove его удалит//
+    if(this.classList.contains('element__button_active')){//если кликнув там будет лайк актив,... //
+        this.classList.remove("element__button_active");//...remove его удалит//
     }else{
-        this.classList.add("like__button_active");//в иных случаях(когда не актив)add сделает его актив//
+        this.classList.add("element__button_active");//в иных случаях(когда не актив)add сделает его актив//
     }
 }
 

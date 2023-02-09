@@ -1,5 +1,5 @@
-.like__button {
-  background-image: url(../../images/Heart.svg);
+.element__button {
+  background-image: url(../../../images/Heart.svg);
   background-color: white;
   width: 22px;
   height: 19px;
@@ -10,6 +10,6 @@
   cursor: pointer;
 }
 
-.like__button:hover {
+.element__button:hover {
   opacity: 0.5;
 }
