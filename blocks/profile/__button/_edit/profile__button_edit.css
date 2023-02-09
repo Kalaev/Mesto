@@ -1,6 +1,6 @@
-.profile__edit-button {
+.profile__button_edit {
   display: flex;
-  background-image: url(../../../images/button__pen.svg);
+  background-image: url(../../../../images/button__pen.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-color: initial;
@@ -13,6 +13,6 @@
   padding: 7px;
 }
 
-.profile__edit-button:hover {
+..profile__button_edit:hover {
   opacity: 0.6;
 }

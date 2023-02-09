@@ -13,7 +13,7 @@ function like(){//работать лайк будет так://
 }
 
 
-const aboutButton = document.querySelector(".profile__edit-button");//объявил кнопку в профиле назвал ниже две переменные//
+const aboutButton = document.querySelector(".profile__button_edit");//объявил кнопку в профиле назвал ниже две переменные//
 let profileName
 let profileAbout
 
