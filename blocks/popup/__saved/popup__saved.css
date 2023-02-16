@@ -1,4 +1,4 @@
-.form__save {
+.popup__saved {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -10,7 +10,7 @@
   background-color: black;
 }
 
-.form__save:hover {
+.popup__saved:hover {
   opacity: 0.8;
   border-radius: 2px;
 }
