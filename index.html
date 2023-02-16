@@ -28,91 +28,93 @@
         </div>
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <button class="profile__edit"></button>
+          <button
+            type="button"
+            value="Редактировать"
+            class="profile__button-edit"
+          ></button>
           <p class="profile__about">Исследователь океана</p>
         </div>
-        <button class="profile__add"></button>
+        <button
+          type="button"
+          value="Добавить"
+          class="profile__button-add"
+        ></button>
       </section>
       <section class="elements">
-        <ul class="elements__table">
-          <li class="element">
-            <figure class="element__item">
-              <img
-                src="./images/KCHR.jpg"
-                alt="Карачаевск"
-                class="element__image"
-              />
-              <figcaption class="element__caption">
-                <span class="element__text">Карачаево-Черкессия</span>
-                <button class="element__button"></button>
-              </figcaption>
-            </figure>
+        <ul class="element">
+          <li class="element__item">
+            <!--<img
+              src="./images/для проверки.jpeg"
+              alt="кошка"
+              class="element__image"
+            /> оставлю их тут-->
+            <img
+              src="./images/KCHR.jpg"
+              alt="Карачаево-Черкессия"
+              class="element__image"
+            />
+            <div class="element__about-image">
+              <h2 class="element__text">Карачаево-Черкессия</h2>
+              <button type="button" class="element__button"></button>
+            </div>
           </li>
-          <li class="element">
-            <figure class="element__item">
-              <img
-                src="./images/Elbrus.jpg"
-                alt="Эльбрус-Красавец"
-                class="element__image"
-              />
-              <figcaption class="element__caption">
-                <span class="element__text">Гора Эльбрус</span>
-                <button class="element__button"></button>
-              </figcaption>
-            </figure>
+          <li class="element__item">
+            <!-- <img
+              src="./images/для проверки2.jpeg"
+              alt="Эльбрус-Красавец"
+              class="element__image"
+            />-->
+            <img
+              src="./images/Elbrus.jpg"
+              alt="Эльбрус-Красавец"
+              class="element__image"
+            />
+            <div class="element__about-image">
+              <h2 class="element__text">Гора Эльбрус</h2>
+              <button type="button" class="element__button"></button>
+            </div>
           </li>
-          <li class="element">
-            <figure class="element__item">
-              <img
-                src="./images/Dombai.jpg"
-                alt="Домбай"
-                class="element__image"
-              />
-              <figcaption class="element__caption">
-                <span class="element__text">Домбай</span>
-                <button class="element__button"></button>
-              </figcaption>
-            </figure>
+          <li class="element__item">
+            <img
+              src="./images/Dombai.jpg"
+              alt="Домбай"
+              class="element__image"
+            />
+            <div class="element__about-image">
+              <h2 class="element__text">Домбай</h2>
+              <button type="button" class="element__button"></button>
+            </div>
           </li>
-          <li class="element">
+          <li class="element__item">
             <!--Далее будут мои фото.-->
-            <figure class="element__item">
-              <img
-                src="./images/Adler.jpg"
-                alt="Адлер"
-                class="element__image"
-              />
-              <figcaption class="element__caption">
-                <span class="element__text">Адлер</span>
-                <button class="element__button"></button>
-              </figcaption>
-            </figure>
+            <img src="./images/Adler.jpg" alt="Адлер" class="element__image" />
+            <div class="element__about-image">
+              <h2 class="element__text">Адлер</h2>
+              <button type="button" class="element__button"></button>
+            </div>
           </li>
-          <li class="element">
-            <figure class="element__item">
-              <img
-                src="./images/Kanion.JPG"
-                alt="Сулакский каньон"
-                class="element__image"
-              />
-              <figcaption class="element__caption">
-                <span class="element__text">Сулакский каньон</span>
-                <button class="element__button"></button>
-              </figcaption>
-            </figure>
+          <li class="element__item">
+            <img
+              src="./images/Kanion.JPG"
+              alt="Сулакский каньон"
+              class="element__image"
+            />
+            <div class="element__about-image">
+              <h2 class="element__text">Сулакский каньон</h2>
+              <button type="button" class="element__button"></button>
+            </div>
           </li>
-          <li class="element">
-            <figure class="element__item">
-              <img
-                src="./images/GES.JPG"
-                alt="Чиркейская ГЭС"
-                class="element__image"
-              />
-              <figcaption class="element__caption">
-                <span class="element__text">Чиркейская ГЭС</span>
-                <button class="element__button"></button>
-              </figcaption>
-            </figure>
+          <li class="element__item">
+            <img
+              src="./images/GES.JPG"
+              alt="Чиркейская ГЭС"
+              class="element__image"
+            />
+            <div class="element__about-image">
+              <h2 class="element__text">Чиркейская ГЭС</h2>
+              <button type="button" class="element__button"></button>
+            </div>
           </li>
         </ul>
       </section>
@@ -120,15 +122,29 @@
     <footer class="footer">
       <p class="footer__author">© 2023 Mesto Russia Х.М.Калаев</p>
     </footer>
-    <section class="popup">
+    <div class="popup">
       <div class="popup__container">
-        <button class="popup__close"></button>
-        <h1 class="popup__header">Редактировать профиль</h1>
-        <input class="popup__name" />
-        <input class="popup__about" />
-        <button class="popup__save">Сохранить</button>
+        <h2 class="popup__header">Редактировать профиль</h2>
+        <form action="#" name="popup" class="popup__content" type="submit">
+          <input
+            class="popup__input popup__input_type_name"
+            placeholder="Введите имя"
+            name="popup__name"
+            type="text"
+          />
+          <input
+            class="popup__input popup__input_type_about"
+            placeholder="Введите свою профессию"
+            name="popup__about"
+            type="text"
+          />
+          <button type="submit" value="Сохранить" class="form__save">
+            Сохранить
+          </button>
+        </form>
+        <button type="button" value="Закрыть" class="popup__close"></button>
       </div>
-    </section>
-    <script src="./index.js"></script>
+    </div>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

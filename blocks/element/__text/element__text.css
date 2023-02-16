@@ -3,4 +3,6 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 200px;
+  color: #000000;
+  margin: 0;
 }
