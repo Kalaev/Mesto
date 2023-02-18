@@ -6,17 +6,19 @@
   background-position: center;
   border: 2px solid #ffffff;
   border-radius: 2px;
-  margin: 35px 0 35px 244px;
+  margin: 35px 0 0 auto;
   cursor: pointer;
-  padding: 14px 64px;
+  width: 150px;
+  height: 50px;
 }
 
 .profile__button-add:hover {
   opacity: 0.6;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
   .profile__button-add {
+    background-size: 16px;
     width: 282px;
     margin: 0;
   }

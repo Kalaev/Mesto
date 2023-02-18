@@ -2,4 +2,7 @@
   width: 120px;
   height: 120px;
   border-radius: 100%;
+  object-fit: cover;
+  object-position: center; /*object-fit обычно советуют использовать с object-position 
+  провел 'на кошках' вроде красиво, спасибо за совет*/
 }

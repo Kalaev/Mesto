@@ -30,5 +30,3 @@ const saveForm = document.querySelector(".popup__content");
   handlePopupCloseClick();
  };
  saveForm.addEventListener("submit", handleFormSubmit); 
-
- console.log(saveForm)

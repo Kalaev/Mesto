@@ -1,3 +1,8 @@
+<!--Очень стыдно, что из 25 ошибок почти 20 были мною упущены с прошлого раза. 
+        В прошлой ПР я при составлении отзыва написал чтоб добавиои возможность отмечать исправления когда читаешь ревью - своего рода Poka-yoke 
+        (я работал в компании где кайдзен был духом и оттуда узнал термин Poka-yoke). 
+        Вы поделились многими ссылками хотел бы и вам отправить одну 
+        оказывается прицип Poka-yoke есть и в программировании https://habr.com/ru/company/badoo/blog/333592/-->
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -19,21 +24,21 @@
     </header>
     <main>
       <section aria-label="Информация о пользователе" class="profile">
-        <div class="profile__avatar">
-          <img
-            src="./images/Cousteau.png"
-            alt="Аватарка"
-            class="profile__avatar-image"
-          />
-        </div>
-        <div class="profile__info">
-          <h1 class="profile__name">Жак-Ив Кусто</h1>
+        <img
+          src="./images/Cousteau.png"
+          alt="Аватарка"
+          class="profile__avatar-image"
+        />
+        <div class="profile__table">
+          <div class="profile__info">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <p class="profile__about">Исследователь океана</p>
+          </div>
           <button
             type="button"
             value="Редактировать"
             class="profile__button-edit"
           ></button>
-          <p class="profile__about">Исследователь океана</p>
         </div>
         <button
           type="button"
@@ -125,7 +130,7 @@
     <div class="popup">
       <div class="popup__container">
         <h2 class="popup__header">Редактировать профиль</h2>
-        <form action="#" name="popup" class="popup__content" type="submit">
+        <form action="#" name="popup" class="popup__content">
           <input
             class="popup__input popup__input_type_name"
             placeholder="Введите имя"
