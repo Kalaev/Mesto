@@ -20,5 +20,9 @@
 @media screen and (max-width: 768px) {
   .popup__saved {
     width: 238px;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 15px;
+    height: 46px;
   }
 }

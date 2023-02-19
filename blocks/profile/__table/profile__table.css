@@ -2,3 +2,9 @@
   display: flex;
   max-width: 370px;
 }
+
+@media screen and (max-width: 680px) {
+  .profile__table {
+    max-width: 200px;
+  }
+}
