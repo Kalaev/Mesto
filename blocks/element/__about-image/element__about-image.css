@@ -1,5 +1,6 @@
 .element__about-image {
   display: flex;
   justify-content: space-between;
-  margin: 25px 15px 31px 21px;
+  margin: 22px 0 29px 0;
+  padding: 0px 21px 0px 21px; /*просто фантастический подгон ))*/
 }

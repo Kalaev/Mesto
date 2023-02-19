@@ -11,6 +11,7 @@
     padding: 0;
     max-width: 220px;
     grid-template-columns: 1fr 18px;
-    gap: 14px 10px;
+    gap: 9px 0;
+    margin: 25px 0 30px 28px;
   }
 }

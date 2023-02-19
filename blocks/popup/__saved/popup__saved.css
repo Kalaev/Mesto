@@ -8,10 +8,17 @@
   width: 358px;
   height: 50px;
   background-color: black;
+  border: none;
+  border-radius: 2px; /*это и еще в попап_клоз плод верстки в 5-6 утра*/
   cursor: pointer; /*невнимательность просто убивает*/
 }
 
 .popup__saved:hover {
   background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__saved {
+    width: 238px;
+  }
 }

@@ -1,6 +1,6 @@
 .profile {
   display: flex;
-  margin: 40px auto 39px; /*подогнал вручную*/
+  margin: 40px auto 47px; /*подогнал вручную*/
   justify-content: space-between;
   max-width: 880px;
   padding: 0 10px;
