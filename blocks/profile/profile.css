@@ -3,6 +3,7 @@
   margin: 40px auto 39px; /*подогнал вручную*/
   justify-content: space-between;
   max-width: 880px;
+  padding: 0 10px;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,5 +1,6 @@
 .element__item {
   list-style-type: none;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 10px;
+  max-width: 282px;
 }
