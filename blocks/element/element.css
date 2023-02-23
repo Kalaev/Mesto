@@ -1,7 +1,6 @@
 .element {
   display: grid;
-  justify-content: center; /*на первых порах не всегда ясна и понятна логика построения. 
-  Была задуммка сделать адаптивность и на расширения 768рх но не стал делать т.к нет данных для этого.*/
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(282px, auto));
   grid-template-rows: auto;
   gap: 20px 17px;
