@@ -1,0 +1,15 @@
+.element__delete {
+  position: absolute;
+  background-image: url(../../../images/Group.png);
+  background-color: rgba(255, 255, 255, 0);
+  background-size: contain;
+  background-position: center;
+  object-fit: contain;
+  object-position: top right;
+  width: 18px;
+  height: 19px;
+  top: 20px;
+  right: 20px;
+  border-style: none;
+  cursor: pointer;
+}

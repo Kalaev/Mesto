@@ -33,6 +33,7 @@
             type="button"
             value="Редактировать"
             class="profile__button-edit"
+            title="Редактировать профиль"
           ></button>
         </div>
         <button
@@ -42,81 +43,7 @@
         ></button>
       </section>
       <section aria-label="Красивые места" class="elements">
-        <ul class="element">
-          <li class="element__item">
-            <!--<img
-              src="./images/для проверки.jpeg"
-              alt="кошка"
-              class="element__image"
-            />оставлю их тут-->
-            <img
-              src="./images/KCHR.jpg"
-              alt="Карачаево-Черкессия"
-              class="element__image"
-            />
-            <div class="element__about-image">
-              <h2 class="element__text">Карачаево-Черкессия</h2>
-              <button type="button" class="element__button"></button>
-            </div>
-          </li>
-          <li class="element__item">
-            <!--<img
-              src="./images/для проверки2.jpeg"
-              alt="Эльбрус-Красавец"
-              class="element__image"
-            />-->
-            <img
-              src="./images/Elbrus.jpg"
-              alt="Эльбрус-Красавец"
-              class="element__image"
-            />
-            <div class="element__about-image">
-              <h2 class="element__text">Гора Эльбрус</h2>
-              <button type="button" class="element__button"></button>
-            </div>
-          </li>
-          <li class="element__item">
-            <img
-              src="./images/Dombai.jpg"
-              alt="Домбай"
-              class="element__image"
-            />
-            <div class="element__about-image">
-              <h2 class="element__text">Домбай</h2>
-              <button type="button" class="element__button"></button>
-            </div>
-          </li>
-          <li class="element__item">
-            <!--Далее будут мои фото.-->
-            <img src="./images/Adler.jpg" alt="Адлер" class="element__image" />
-            <div class="element__about-image">
-              <h2 class="element__text">Адлер</h2>
-              <button type="button" class="element__button"></button>
-            </div>
-          </li>
-          <li class="element__item">
-            <img
-              src="./images/Kanion.JPG"
-              alt="Сулакский каньон"
-              class="element__image"
-            />
-            <div class="element__about-image">
-              <h2 class="element__text">Сулакский каньон</h2>
-              <button type="button" class="element__button"></button>
-            </div>
-          </li>
-          <li class="element__item">
-            <img
-              src="./images/GES.JPG"
-              alt="Чиркейская ГЭС"
-              class="element__image"
-            />
-            <div class="element__about-image">
-              <h2 class="element__text">Чиркейская ГЭС</h2>
-              <button type="button" class="element__button"></button>
-            </div>
-          </li>
-        </ul>
+        <ul class="element"></ul>
       </section>
     </main>
     <footer aria-label="Подвал" class="footer">
@@ -143,6 +70,68 @@
           </button>
         </form>
         <button type="button" value="Закрыть" class="popup__close"></button>
+      </div>
+    </div>
+    <div class="popup popup-add">
+      <div class="popup__container">
+        <h2 class="popup__header">Новое место</h2>
+        <form action="#" name="popup" class="popup-add__content popup__content">
+          <input
+            class="popup__input popup-add__input_type_name"
+            placeholder="Название"
+            name="popup-add__name"
+            type="text"
+          />
+          <input
+            class="popup__input popup-add__input_type_link"
+            placeholder="Ссылка на картинку"
+            name="popup-add__link"
+            type="text"
+          />
+          <button
+            type="submit"
+            value="Создать"
+            class="popup__saved popup-add__create"
+          >
+            Создать
+          </button>
+        </form>
+        <button
+          type="button"
+          value="Закрыть"
+          class="popup__close popup-add__close"
+        ></button>
+      </div>
+    </div>
+    <template id="template-item">
+      <li class="element__item">
+        <img
+          src="./images/KCHR.jpg"
+          alt="Карачаево-Черкессия"
+          class="element__image"
+        />
+        <div class="element__about-image">
+          <h2 class="element__text">Карачаево-Черкессия</h2>
+          <button
+            type="button"
+            class="element__button"
+            value="Нравится"
+            title="Редактировать профиль"
+          ></button>
+        </div>
+        <button class="element__delete" type="button" value="Удалить"></button>
+      </li>
+    </template>
+    <div class="popup popup-image" id="popup-image">
+      <div class="popup-image__container">
+        <img src="" alt="" class="popup__photo" />
+        <button class="popup__close"></button>
+        <h2 class="popup-photo__title"></h2>
+        <button
+          type="button"
+          value="Закрыть"
+          class="popup__close popup-add__close"
+        ></button>
       </div>
     </div>
     <script src="./scripts/index.js"></script>
