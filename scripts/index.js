@@ -33,7 +33,7 @@ const popupAdd = document.querySelector(".popup-add");
 const createButton = document.querySelector(".popup-add__create");
 const closeAddButton = document.querySelector(".popup-add__close");
 const likeButton = document.querySelectorAll(".element__button"); 
-const closeButton = popup.querySelector(".popup__close");
+const closeButtons = document.querySelectorAll(".popup__close");
 const elementsContainer = document.querySelector(".element");
 const template = document.getElementById('template-item');
 const newItemImage = template.querySelector('.element__image');
@@ -59,22 +59,17 @@ const handleAddButtonClick = () => {
   popupAdd.classList.add("popup_opened");
 };
 
-const handlePopupCloseClick = () => {
+const handlePopupCloseClick = (evt) => {
+  const popup = document.querySelector(".popup_opened");
   popup.classList.remove("popup_opened");
 };
 
-const handlePopupAddCloseClick = () => {
-  popupAdd.classList.remove("popup_opened");
-};
-
-const handlecloseAddButtonClick = () => {
-  popupAdd.classList.remove("popup_opened");
-};
+closeButtons.forEach(button =>{
+  button.addEventListener('click', handlePopupCloseClick)
+});
 
 editButton.addEventListener("click", handleEditButtonClick);
-closeButton.addEventListener("click", handlePopupCloseClick);
 addButton.addEventListener("click", handleAddButtonClick);
-closeAddButton.addEventListener("click", handlecloseAddButtonClick);
 
 
 const saveForm = document.querySelector(".popup__content");
@@ -144,14 +139,18 @@ createForm.addEventListener("submit", handleCreateFormSubmit);
   elementsContainer.append(newCard);
  }); 
 
-const popupImage = document.querySelector(".popup-image");
-const popupPhoto = document.querySelector(".popup__photo");
-const popupImageTitle = document.querySelector(".popup-image__title");
-
-const handleZoomPhotoClick = () => {
-  popupImage.classList.add("popup_opened");
-  popupPhoto.src = data.link;
-  popupImageTitle.textContent = data.name;
-};
-console.log(popupPhoto)
-console.log(newItemImage)
+ const elementImages = document.querySelectorAll(".element__image");
+ const popupImage = document.querySelector(".popup-image");
+ const popupPhoto = document.querySelector(".popup__photo");
+ const popupImageTitle = document.querySelector(".popup-photo__title");
+ 
+ const handleZoomPhotoClick = (evt) => {
+   popupImage.classList.add("popup_opened");
+   popupPhoto.src = evt.target.src;
+   popupImageTitle.textContent = evt.target.alt;
+ };
+ 
+ //elementImage.addEventListener("click", handleZoomPhotoClick);
+ elementImages.forEach(image =>{
+  image.addEventListener('click', handleZoomPhotoClick)
+});
