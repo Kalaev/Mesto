@@ -25,7 +25,6 @@ const initialCards = [
   }
 ]; 
 
-
 const editButton = document.querySelector(".profile__button-edit");
 const addButton = document.querySelector(".profile__button-add");
 const popup = document.querySelector(".popup");
@@ -44,8 +43,8 @@ let profileName = document.querySelector(".profile__name")
 let profileAbout = document.querySelector(".profile__about")
 let inputName = document.querySelector(".popup__input_type_name")
 let inputAbout = document.querySelector(".popup__input_type_about")
-let newPlaceName = document.querySelector(".popup__add-input_type_name")
-let newPlaceLink = document.querySelector(".popup__add-input_type_link") 
+let newPlaceName = document.querySelector(".popup-add__input_type_name")
+let newPlaceLink = document.querySelector(".popup-add__input_type_link") 
 
 const handleEditButtonClick = () => {
   inputName.value = profileName.textContent
@@ -109,13 +108,13 @@ deleteButtons.forEach(button =>{
 const createForm = document.querySelector(".popup-add__content");
  function handleCreateFormSubmit(evt) {
  evt.preventDefault();
- const inputName = document.querySelector('.popup-add__input_type_name');
- const inputLink = document.querySelector('.popup-add__input_type_link');
+ const inputName = document.querySelector('.popup-add_input_type_name');
+ const inputLink = document.querySelector('.popup-add_input_type_link');
  const name = inputName.value
  const link = inputLink.value
  const newCard = getItemElement({ name, link });
  elementsContainer.append(newCard);
- handlePopupAddCloseClick();
+ handlePopupCloseClick();
 };
 createForm.addEventListener("submit", handleCreateFormSubmit);
 
@@ -142,7 +141,7 @@ createForm.addEventListener("submit", handleCreateFormSubmit);
  const elementImages = document.querySelectorAll(".element__image");
  const popupImage = document.querySelector(".popup-image");
  const popupPhoto = document.querySelector(".popup__photo");
- const popupImageTitle = document.querySelector(".popup-photo__title");
+ const popupImageTitle = document.querySelector(".popup__title");
  
  const handleZoomPhotoClick = (evt) => {
    popupImage.classList.add("popup_opened");
