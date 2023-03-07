@@ -108,8 +108,8 @@ deleteButtons.forEach(button =>{
 const createForm = document.querySelector(".popup-add__content");
  function handleCreateFormSubmit(evt) {
  evt.preventDefault();
- const inputName = document.querySelector('.popup-add_input_type_name');
- const inputLink = document.querySelector('.popup-add_input_type_link');
+ const inputName = document.querySelector('.popup-add__input_type_name');
+ const inputLink = document.querySelector('.popup-add__input_type_link');
  const name = inputName.value
  const link = inputLink.value
  const newCard = getItemElement({ name, link });
