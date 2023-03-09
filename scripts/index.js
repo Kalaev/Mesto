@@ -1,9 +1,9 @@
 const editButton = document.querySelector(".profile__button-edit");
 const addButton = document.querySelector(".profile__button-add");
 const popup = document.querySelector(".popup");
-const popupAdd = document.querySelector(".popup_add-profile");
-const createButton = document.querySelector(".popup_add__create");
-const closeAddButton = document.querySelector(".popup_add__close");
+const popupAdd = document.querySelector(".popup-add-profile");
+const createButton = document.querySelector(".popup-add__create");
+const closeAddButton = document.querySelector(".popup-add__close");
 const likeButton = document.querySelectorAll(".element__button"); 
 const closeButtons = document.querySelectorAll(".popup__close");
 const elementsContainer = document.querySelector(".element");
@@ -63,7 +63,7 @@ const handleDelete = (evt) => {
   evt.target.closest('.element__item').remove();
 };
 
-const createForm = document.querySelector(".popup_add__content");
+const createForm = document.querySelector(".popup-add__content");
  function handleCreateFormSubmit(evt) {
  evt.preventDefault();
  const name = inputNamed.value
