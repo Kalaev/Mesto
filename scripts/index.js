@@ -1,11 +1,10 @@
-const editButton = document.querySelector(".profile__button-edit");
-const addButton = document.querySelector(".profile__button-add");
+const buttonEdit = document.querySelector(".profile__button-edit");
+const buttonAdd = document.querySelector(".profile__button-add");
 const popup = document.querySelector(".popup");
-const popupAdd = document.querySelector(".popup-add");
-const createButton = document.querySelector(".popup-add__create");
-const closeAddButton = document.querySelector(".popup-add__close");
+const popupAddProfile = document.querySelector(".popup-add");
+const popupEditProfile = document.querySelector(".popup_edit-profile");
 const likeButton = document.querySelectorAll(".element__button"); 
-const closeButtons = document.querySelectorAll(".popup__close");
+const buttonsClose = document.querySelectorAll(".popup__close");
 const elementsContainer = document.querySelector(".element");
 const template = document.getElementById('template-item');
 const newItemImage = template.querySelector('.element__image');
@@ -23,57 +22,60 @@ const popupPhoto = document.querySelector(".popup__photo");
 const popupImageTitle = document.querySelector(".popup__title");
 const elementImages = document.querySelectorAll(".element__image");
 
-const handleEditButtonClick = () => {
-  inputName.value = profileName.textContent
-  inputAbout.value = profileAbout.textContent
-  popup.classList.add("popup_opened");
+const openPopup = (popup) => {
+  (popup.classList.add("popup_opened"));
 };
 
-const handleAddButtonClick = () => {
-  inputName.value = profileName.textContent
-  inputAbout.value = profileAbout.textContent
-  popupAdd.classList.add("popup_opened");
+const handlebuttonEditClick = () => {
+    openPopup(popupEditProfile);
+    inputName.value = profileName.textContent
+    inputAbout.value = profileAbout.textContent
+  };
+
+  const handlebuttonAddClick = () => {
+    openPopup(popupAddProfile);
 };
 
 const handlePopupCloseClick = (evt) => {
-  const popup = document.querySelector(".popup_opened");
-  popup.classList.remove("popup_opened");
+const popupCloseClick = document.querySelector(".popup_opened");
+  popupCloseClick.classList.remove("popup_opened");
 };
 
-closeButtons.forEach(button =>{
+buttonsClose.forEach(button =>{
+
   button.addEventListener('click', handlePopupCloseClick)
 });
+
 const handleZoomPhotoClick = (evt) => {
   popupImage.classList.add("popup_opened");
   popupPhoto.src = evt.target.src;
   popupImageTitle.textContent = evt.target.alt;
 };
 
-
-const saveForm = document.querySelector(".popup__content");
- function handleSaveFormSubmit(evt) {
+const saveEditForm = document.querySelector(".popup__content");
+ function handlesaveEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = inputName.value
   profileAbout.textContent = inputAbout.value
   handlePopupCloseClick();
  };
- saveForm.addEventListener("submit", handleSaveFormSubmit); 
+ saveEditForm.addEventListener("submit", handlesaveEditFormSubmit); 
 
 const handleDelete = (evt) => {
   evt.target.closest('.element__item').remove();
 };
 
-const createForm = document.querySelector(".popup-add__content");
- function handleCreateFormSubmit(evt) {
+const createAddForm = document.querySelector(".popup-add__content");
+ function handlecreateAddFormSubmit(evt) {
  evt.preventDefault();
  const name = inputNamed.value
  const link = inputLink.value
  const newCard = getItemElement({ name, link });
  elementsContainer.prepend(newCard);
  handlePopupCloseClick();
- createForm.reset();
+ createAddForm.reset();
 };
-createForm.addEventListener("submit", handleCreateFormSubmit);
+createAddForm.addEventListener("submit", handlecreateAddFormSubmit);
 
  const getItemElement = (data) => {
   const newItemElement = template.content.cloneNode(true);
@@ -103,5 +105,5 @@ function likeCards(){
   }
 }
 
-editButton.addEventListener("click", handleEditButtonClick);
-addButton.addEventListener("click", handleAddButtonClick);
+buttonEdit.addEventListener("click", handlebuttonEditClick);
+buttonAdd.addEventListener("click", handlebuttonAddClick);
